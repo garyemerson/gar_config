@@ -1837,6 +1837,7 @@
 		<dict>
 			<key>name</key>
 			<string>Perl: \char</string>
+            
 			<key>scope</key>
 			<string>constant.character.escape.perl</string>
 			<key>settings</key>
@@ -1845,6 +1846,17 @@
 				<string>#DC322F</string>
 			</dict>
 		</dict>
+
+        <!-- Highlighting for file name/path in Find Results buffer -->
+        <dict>
+            <key>scope</key>
+            <string>entity.name.filename.find-in-files</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#619EC9</string>
+            </dict>
+        </dict>
 	</array>
 	<key>uuid</key>
 	<string>38E819D9-AE02-452F-9231-ECC3B204AFD7</string>
