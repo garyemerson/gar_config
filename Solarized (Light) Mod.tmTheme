@@ -88,7 +88,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#268BD2</string>
+				<string>#586E75</string>
 			</dict>
 		</dict>
 		<dict>
@@ -108,10 +108,7 @@
 			<key>scope</key>
 			<string>storage</string>
 			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold</string>
-				<key>foreground</key>
+			<dict>				<key>foreground</key>
 				<string>#073642</string>
 			</dict>
 		</dict>
@@ -214,10 +211,7 @@
 			<key>scope</key>
 			<string>entity.name.tag</string>
 			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold</string>
-				<key>foreground</key>
+			<dict>				<key>foreground</key>
 				<string>#268BD2</string>
 			</dict>
 		</dict>
@@ -649,10 +643,7 @@
 			<key>scope</key>
 			<string>text.html.ruby</string>
 			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold</string>
-				<key>foreground</key>
+			<dict>				<key>foreground</key>
 				<string>#BD3800</string>
 			</dict>
 		</dict>
@@ -699,10 +690,7 @@
 			<key>scope</key>
 			<string>entity.name.tag.block.any.html</string>
 			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold</string>
-				<key>foreground</key>
+			<dict>				<key>foreground</key>
 				<string>#268BD2</string>
 			</dict>
 		</dict>
@@ -804,10 +792,7 @@
 			<key>scope</key>
 			<string>keyword.control.ruby, keyword.control.def.ruby</string>
 			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold</string>
-				<key>foreground</key>
+			<dict>				<key>foreground</key>
 				<string>#738A05</string>
 			</dict>
 		</dict>
