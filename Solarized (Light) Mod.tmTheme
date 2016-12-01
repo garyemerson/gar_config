@@ -1837,7 +1837,6 @@
 		<dict>
 			<key>name</key>
 			<string>Perl: \char</string>
-            
 			<key>scope</key>
 			<string>constant.character.escape.perl</string>
 			<key>settings</key>
