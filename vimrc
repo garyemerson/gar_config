@@ -1,0 +1,222 @@
+" Garrett Mohammadioun
+" This .vimrc file includes many settings aimed to optimize vim
+" for efficient programming and/or general text editing
+"
+ 
+" Use Vim settings, rather than Vi settings
+set nocompatible
+ 
+" Clear all other autocommands
+autocmd!
+ 
+" TODO: Not working
+"   -> Whenever this is uncommented vim starts up as though c were pressed and
+"      therefore the first attempt to navigate the file could possibly delete
+"      text and put you in insert mode.
+"   -> For some reason it seems the ESC key is pressed on startup and therefore
+"      :noh is executed
+" In normal mode, map ESC to :nohlsearch so when
+" pressed (ESC) searches are temporarily cleared
+"nnoremap <Esc> :noh<CR><Esc>
+ 
+" Clear searches easier
+noremap <silent> \ :nohlsearch<CR>
+ 
+" Enter command-line mode easier
+"noremap <Space> :
+noremap ; :
+noremap : ;
+ 
+" Escape seems more useful but is far away, CTRL-C is close but not as useful
+noremap <C-c> <Esc>
+"" TODO: For some reason mapping escape makes vim enter in the middle of a 2c command
+noremap <Esc> <C-c>
+ 
+" Scroll intuitively on OS X Terminal
+noremap OA <C-y>
+noremap OB <C-e>
+ 
+" Stop using colon bruh
+"noremap : <Nop>
+ 
+" Mappings to move cursor 10 lines up/down to make navigation a bit easier
+noremap <C-j> 10j
+noremap <C-k> 10k
+ 
+" When deleting, don't overwrite an 'important' register. Instead use the black
+" hole register (i.e. make delete work like delete not cut).
+nnoremap dd "_dd
+noremap d "_d
+ 
+" Deleting with x shouldn't really copy either
+vnoremap x "_d
+nnoremap x "_dl
+ 
+" When cutting, don't go into insert mode
+nnoremap cc dd
+noremap c d
+
+" Make doing window operations easier.
+" NOTE: Overwrites the jump-to-next-word command
+" noremap w <C-w>
+ 
+" Seems more right
+"noremap <S-Right> e
+noremap <C-Right> e
+
+" Mimic other WYSIWYG text editors
+nnoremap <C-Up> <C-Y>
+nnoremap <C-Down> <C-E>
+ 
+" Shortcut for saving
+nnoremap S :w<CR>
+nnoremap <C-S> :w<CR>
+ 
+" When searching for the word under the cursor don't jump to the next match. Instead
+" stay at the current cursor position.
+noremap * *N
+noremap # #N
+ 
+"" TODO: This annoyingly creates a delay when using dd to delete a line. Check
+"" if there is another command/key sequence that starts with du
+"" TODO: Make function that is called from mapping that prints on the cmd line
+"" whether paste has just been turned off or turned on
+" Mapping to toggle paste option easily
+"noremap du :set paste!<CR>
+ 
+" Shortcut for opening new tab
+if has("gui_running")
+    noremap <C-n> :browse tabedit<CR>
+else
+    noremap <C-n> :tabedit .<CR>
+endif
+ 
+ 
+" Prevent accidentily entering Ex mode. Nobody actually wants to be in Ex mode.
+nnoremap Q <Nop>
+ 
+" Mapping that also clears the command-line when CTRL-C is press. Mapping to
+" :<C-c> doesn't work because for some reason when in Operator pending mode for
+" the c operator, this mapping will leave you in insert mode instead of bringing
+" you back to normal mode like a user would expect.
+"onoremap <C-c> <C-c>:<C-c>
+"nnoremap <C-c> :<C-c>
+"vnoremap <C-c> :<C-c>
+" Map the escape key to do nothing in order to train oneself to use CTRL-C
+" instead since it's probably better not to reach so far from home (row)
+"noremap <ESC> <Nop>
+"noremap! <ESC> <Nop>
+ 
+"nnoremap <Esc> <Esc>:<Esc>:<Esc>
+ 
+"map <C-;> <Esc>
+"map! <C-;> <Esc>
+ 
+"onoremap <C-c> <Nop>
+"nnoremap <C-c> <Nop>
+"vnoremap <C-c> <Nop>
+"noremap! <C-c> <Nop>
+ 
+" Attempt to temporarily fix the issue with entering vim in the middle of a 2c
+" operation when mapping the escape key
+"autocmd VimEnter * :execute "normal "
+
+"function! SyntaxItem()
+"  return synIDattr(synID(line("."),col("."),1),"name")
+"endfunction
+"
+"set statusline+=%{SyntaxItem()}
+ 
+"set showtabline=2                      " Always show tabline
+"set nowrapscan                         " Don't wrap search at the end or beginning of file
+set hlsearch                            " Always highlight search
+set ttimeoutlen=0                       " Eliminate the delay when hitting the ESC key in visual mode, command mode etc
+set lazyredraw                          " Redraw the screen less often to increase speed
+set ruler                               " Show the cursor position all the time
+set rulerformat=%21(%m\ %l,%c%V%=%P%)   " Determine what the ruler in the bottom right displays
+set showcmd                             " Show (partial) commands on the last line of the screen.
+set showmatch                           " Show matching brackets, braces and parentheses
+set ignorecase                          " Ignore case when searching
+set backspace=2                         " Backspace over everything
+set formatoptions+=ro                   " Auto-insert comments leaders
+set autoindent                          " Set autoindent on
+set display+=lastline                   " As much as possible of the last line in a window will be displayed
+set number                              " Show line numbers
+set scrolloff=1                         " always show one line above/below cursor
+set expandtab                           " Use spaces instead of tabs
+set tabstop=4                           " Set tab widths
+set shiftwidth=4                        " Set width of indentation
+set softtabstop=4                       " Make backspacing over tabs delete the whole tab when
+                                        " expandtab is set (i.e. when using spaces instead of tabs)
+if has("clipboard")                     " If there's clipboard support then setup to use system clipboard
+    set clipboard=unnamed
+endif
+ 
+" Highlight the cursorline.
+" Setting cursorline can sometimes slow down scrolling significantly and general
+" navigation in reguler (terminal) vim. As of now, this setting is only used
+" with the gui because it seems to be" uneffected.
+if has("gui_running")
+    "set cursorline
+else
+    "set cursorline
+endif
+ 
+set guifont=Consolas:h11:cANSI " Set font choice for gVim
+ 
+" Make a more minimalistic gui window
+set guioptions-=m " Remove gui menu bar
+"set guioptions-=T " Remove gui toolbar
+set guioptions-=r " Remove gui right scrollbar
+ 
+" gVim will sometimes startup with an excessively large window. Let's not do that.
+if has("gui_running")
+    set lines=24 columns=80
+endif
+ 
+"--------------------------------Color Changes--------------------------------"
+" NOTE: These are color changes have now been incorporated into a colorscheme
+" file, as that seems the most appropriate place to put them.
+ 
+" Autocommand that highlights the CursorLine a specific way AFTER the
+" colorscheme has been loaded so it's not overridden by the colorscheme file
+"autocmd VimEnter * highlight CursorLine gui=NONE guibg=black guifg=NONE cterm=NONE ctermbg=black ctermfg=NONE
+"highlight CursorLine gui=NONE guibg=black guifg=NONE cterm=NONE ctermbg=black ctermfg=NONE
+ 
+" Autocommand that highlights the CursorLine a specific way AFTER the
+" colorscheme has been loaded
+"autocmd ColorScheme * highlight CursorLine gui=NONE guibg=black guifg=NONE cterm=NONE ctermbg=black ctermfg=NONE
+ 
+" Highlight Visual regions in a transparent-like manner
+"autocmd VimEnter * highlight Visual term=reverse cterm=NONE ctermbg=240 ctermfg=NONE gui=NONE guibg=#505050 guifg=NONE
+ 
+" Highlight the line numbers in a subtle gray, trying to discact the reader
+"autocmd VimEnter * highlight LineNr term=reverse cterm=NONE ctermbg=NONE ctermfg=245 gui=NONE guibg=#8a8a8a guifg=NONE
+"--------------------------------Color Changes--------------------------------"
+ 
+" TODO: Add portablility (i.e. when different amount of colors is available)
+set t_Co=256 " Use 256 colors
+ 
+" Only use colors if you have colors
+if &t_Co > 2 || has("gui_running")
+    syntax enable
+endif
+ 
+" Set colorscheme
+if has("gui_running")
+    colorscheme light
+    "colorscheme desert
+else
+    colorscheme light
+    "colorscheme desert
+endif
+
+"autocmd InsertEnter * set cursorline
+"autocmd InsertLeave * set nocursorline
+ 
+" Highlight extra spaces and tabs
+"if exists("*matchadd")
+"    autocmd VimEnter,WinEnter * call matchadd('WhiteSpace', '\s\+$\| \+\ze\t')
+"else
+"    autocmd VimEnter,WinEnter * match WhiteSpace /\s\+$\| \+\ze\t/
+
