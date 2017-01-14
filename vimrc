@@ -204,11 +204,9 @@ endif
  
 " Set colorscheme
 if has("gui_running")
-    colorscheme light
-    "colorscheme desert
+    silent! colorscheme light
 else
-    colorscheme light
-    "colorscheme desert
+    silent! colorscheme light
 endif
 
 "autocmd InsertEnter * set cursorline
