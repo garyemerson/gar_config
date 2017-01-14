@@ -1,0 +1,80 @@
+SpecialKey     xxx term=bold ctermfg=9 guifg=Cyan
+NonText        xxx term=bold ctermfg=9 gui=bold guifg=Blue
+Directory      xxx term=bold ctermfg=11 guifg=Cyan
+ErrorMsg       xxx term=standout ctermfg=15 ctermbg=4 guifg=White guibg=Red
+IncSearch      xxx term=reverse cterm=reverse gui=reverse
+Search         xxx term=reverse ctermfg=0 ctermbg=14 guifg=Black guibg=Yellow
+MoreMsg        xxx term=bold ctermfg=10 gui=bold guifg=SeaGreen
+ModeMsg        xxx term=bold cterm=bold gui=bold
+LineNr         xxx term=underline ctermfg=14 guifg=Yellow
+CursorLineNr   xxx term=bold ctermfg=14 gui=bold guifg=Yellow
+Question       xxx term=standout ctermfg=10 gui=bold guifg=Green
+StatusLine     xxx term=bold,reverse cterm=bold,reverse gui=bold,reverse
+StatusLineNC   xxx term=reverse cterm=reverse gui=reverse
+VertSplit      xxx term=reverse cterm=reverse gui=reverse
+Title          xxx term=bold ctermfg=13 gui=bold guifg=Magenta
+Visual         xxx term=reverse ctermbg=8 guibg=DarkGrey
+VisualNOS      xxx term=bold,underline cterm=bold,underline gui=bold,underline
+WarningMsg     xxx term=standout ctermfg=12 guifg=Red
+WildMenu       xxx term=standout ctermfg=0 ctermbg=14 guifg=Black guibg=Yellow
+Folded         xxx term=standout ctermfg=11 ctermbg=8 guifg=Cyan guibg=DarkGrey
+FoldColumn     xxx term=standout ctermfg=11 ctermbg=8 guifg=Cyan guibg=Grey
+DiffAdd        xxx term=bold ctermbg=1 guibg=DarkBlue
+DiffChange     xxx term=bold ctermbg=5 guibg=DarkMagenta
+DiffDelete     xxx term=bold ctermfg=9 ctermbg=3 gui=bold guifg=Blue guibg=DarkCyan
+DiffText       xxx term=reverse cterm=bold ctermbg=12 gui=bold guibg=Red
+SignColumn     xxx term=standout ctermfg=11 ctermbg=8 guifg=Cyan guibg=Grey
+Conceal        xxx ctermfg=7 ctermbg=8 guifg=LightGrey guibg=DarkGrey
+SpellBad       xxx term=reverse ctermbg=12 gui=undercurl guisp=Red
+SpellCap       xxx term=reverse ctermbg=9 gui=undercurl guisp=Blue
+SpellRare      xxx term=reverse ctermbg=13 gui=undercurl guisp=Magenta
+SpellLocal     xxx term=underline ctermbg=11 gui=undercurl guisp=Cyan
+Pmenu          xxx ctermfg=0 ctermbg=13 guibg=Magenta
+PmenuSel       xxx ctermfg=8 ctermbg=0 guibg=DarkGrey
+PmenuSbar      xxx ctermbg=7 guibg=Grey
+PmenuThumb     xxx ctermbg=15 guibg=White
+TabLine        xxx term=underline cterm=underline ctermfg=15 ctermbg=8 gui=underline guibg=DarkGrey
+TabLineSel     xxx term=bold cterm=bold gui=bold
+TabLineFill    xxx term=reverse cterm=reverse gui=reverse
+CursorColumn   xxx term=reverse ctermbg=8 guibg=Grey40
+CursorLine     xxx term=underline cterm=underline guibg=Grey40
+ColorColumn    xxx term=reverse ctermbg=4 guibg=DarkRed
+MatchParen     xxx term=reverse ctermbg=3 guibg=DarkCyan
+Comment        xxx term=bold ctermfg=11 guifg=#80a0ff
+Constant       xxx term=underline ctermfg=13 guifg=#ffa0a0
+Special        xxx term=bold ctermfg=12 guifg=Orange
+Identifier     xxx term=underline cterm=bold ctermfg=11 guifg=#40ffff
+Statement      xxx term=bold ctermfg=14 gui=bold guifg=#ffff60
+PreProc        xxx term=underline ctermfg=9 guifg=#ff80ff
+Type           xxx term=underline ctermfg=10 gui=bold guifg=#60ff60
+Underlined     xxx term=underline cterm=underline ctermfg=9 gui=underline guifg=#80a0ff
+Ignore         xxx ctermfg=0 guifg=bg
+Error          xxx term=reverse ctermfg=15 ctermbg=12 guifg=White guibg=Red
+Todo           xxx term=standout ctermfg=0 ctermbg=14 guifg=Blue guibg=Yellow
+
+
+
+String         xxx links to Constant
+Character      xxx links to Constant
+Number         xxx links to Constant
+Boolean        xxx links to Constant
+Float          xxx links to Number
+Function       xxx links to Identifier
+Conditional    xxx links to Statement
+Repeat         xxx links to Statement
+Label          xxx links to Statement
+Operator       xxx links to Statement
+Keyword        xxx links to Statement
+Exception      xxx links to Statement
+Include        xxx links to PreProc
+Define         xxx links to PreProc
+Macro          xxx links to PreProc
+PreCondit      xxx links to PreProc
+StorageClass   xxx links to Type
+Structure      xxx links to Type
+Typedef        xxx links to Type
+Tag            xxx links to Special
+SpecialChar    xxx links to Special
+Delimiter      xxx links to Special
+SpecialComment xxx links to Special
+Debug          xxx links to Special
