@@ -32,4 +32,3 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias v='vim'
 alias gdb='gdb -q'
-

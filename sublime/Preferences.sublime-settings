@@ -13,6 +13,7 @@
 	"scroll_past_end": true,
 	"show_encoding": true,
 	"tab_completion": false,
+	"tabs_small": true,
 	"theme": "Numix.sublime-theme",
 	"translate_tabs_to_spaces": true
 }
