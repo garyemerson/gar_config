@@ -12,11 +12,11 @@ source $HOME/gar_bin/path_builder $HOME/gar_bin
 # Show the shell where java is
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 
-PS1='\[\e[0;37m\][\t] \u:\w\[\e[0;33m\]\342\230\273\[\e[0m\] '
+export PS1='\[\e[0;37m\][\t] \u:\w\[\e[0;33m\]\342\230\273\[\e[0m\] '
 
 # Keep history for longer
-HISTSIZE=10000
-HISTFILESIZE=20000
+export HISTSIZE=10000
+export HISTFILESIZE=20000
 
 export LESS=-i
 export GOPATH=$HOME/Documents/workspaces/go_space
