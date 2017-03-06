@@ -19,7 +19,7 @@ hi IncSearch       term=reverse cterm=reverse gui=reverse
 hi Search          term=reverse ctermbg=Yellow guibg=Yellow
 hi MoreMsg         term=bold ctermfg=DarkGreen gui=bold guifg=SeaGreen
 hi ModeMsg         term=bold cterm=bold ctermfg=Red gui=bold
-hi LineNr          term=underline ctermfg=DarkGray guifg=DarkGray
+hi LineNr          term=underline ctermfg=LightGray guifg=DarkGray
 hi Question        term=standout ctermfg=DarkGreen gui=bold guifg=SeaGreen
 hi StatusLine      term=bold,reverse cterm=bold,reverse gui=bold,reverse
 hi StatusLineNC    term=reverse cterm=reverse gui=reverse

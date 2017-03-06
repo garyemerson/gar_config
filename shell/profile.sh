@@ -19,7 +19,7 @@ export HISTSIZE=10000
 export HISTFILESIZE=20000
 
 export LESS=-i
-export GOPATH=$HOME/Documents/workspaces/go_space
+export GOPATH=$HOME/workspaces/go_space
 
 shopt -s nocaseglob
 
@@ -33,3 +33,4 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias v='vim'
 alias gdb='gdb -q'
+alias gitnew='git init && git add . && git commit -m "initial commit"'
