@@ -12,7 +12,7 @@ source $HOME/gar_bin/path_builder $HOME/gar_bin
 # Show the shell where java is
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 
-export PS1='\[\e[0;37m\][\t] \u:\w\[\e[0;33m\]\342\230\273\[\e[0m\] '
+export PS1='\[\e[0;37m\][\t] \u:\w\n\[\e[0;33m\]\342\230\273\[\e[0m\] '
 
 # Keep history for longer
 export HISTSIZE=100000
