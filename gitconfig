@@ -1,8 +1,13 @@
-# This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 	name = garyemerson
-	email = noneya@mindyours.com
+	email = garyemerson@noneya
+[color]
+	ui = auto
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 [core]
 	pager = less -R
-	autocrlf = false
+    autocrlf = false
+	excludesfile = /Users/Garrett/.gitignore_global
