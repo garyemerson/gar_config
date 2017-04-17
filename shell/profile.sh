@@ -15,8 +15,8 @@ export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Ho
 export PS1='\[\e[0;37m\][\t] \u:\w\[\e[0;33m\]\342\230\273\[\e[0m\] '
 
 # Keep history for longer
-export HISTSIZE=10000
-export HISTFILESIZE=20000
+export HISTSIZE=100000
+export HISTFILESIZE=200000
 
 export LESS=-i
 export GOPATH=$HOME/workspaces/go_space
