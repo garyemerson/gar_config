@@ -151,7 +151,7 @@ function prompt {
     $PrintPath = $PrintPath.Replace($HOME, "~")
 
     # Print CD
-    Write-Host "PS $PrintPath" -NoNewLine -ForegroundColor DarkGray
+    Write-Host "PS $PrintPath" -ForegroundColor DarkGray
     $PrompEndStr = "$([char]0x263b)"
     Write-Host "$($PrompEndStr * ($nestedPromptLevel + 1))" -NoNewLine -ForegroundColor DarkYellow
 
