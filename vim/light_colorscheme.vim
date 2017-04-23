@@ -25,7 +25,7 @@ hi StatusLine      term=bold,reverse cterm=bold,reverse gui=bold,reverse
 hi StatusLineNC    term=reverse cterm=reverse gui=reverse
 hi VertSplit       term=reverse cterm=reverse gui=reverse
 hi Title           term=bold ctermfg=DarkMagenta gui=bold guifg=Magenta
-hi Visual          term=reverse ctermbg=DarkGray guibg=DarkGray
+hi Visual          term=reverse ctermbg=LightGray guibg=DarkGray
 hi WarningMsg      term=standout ctermfg=DarkRed guifg=Red
 hi WildMenu        term=standout ctermfg=Black ctermbg=Yellow guifg=Black guibg=Yellow
 hi Folded          term=standout ctermfg=DarkBlue ctermbg=Gray guifg=DarkBlue guibg=LightGrey
