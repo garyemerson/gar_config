@@ -14,8 +14,11 @@
 	],
 	"scroll_past_end": true,
 	"show_encoding": true,
+	"show_errors_inline": false,
 	"tab_completion": false,
 	"tabs_small": true,
-	"theme": "Numix.sublime-theme",
+	"theme": "Boxy Solarized Light.sublime-theme",
+	"theme_find_panel_atomized": true,
+	"theme_tab_selected_label_bold": true,
 	"translate_tabs_to_spaces": true
 }

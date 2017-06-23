@@ -1,0 +1,21 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ayu",
+		"Boxy Theme",
+		"CTags",
+		"HexViewer",
+		"Indent XML",
+		"Missing Palette Commands",
+		"Origami",
+		"Package Control",
+		"PowerShell",
+		"SFTP",
+		"SideBarEnhancements",
+		"TOML"
+	]
+}
