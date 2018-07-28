@@ -25,3 +25,11 @@ set completion-ignore-case on
 
 TAB: menu-complete
 "\e[Z": "\e-1\C-i"
+
+# From https://unix.stackexchange.com/a/20830
+# Key bindings, up/down arrow searches through history
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\eOA": history-search-backward
+"\eOB": history-search-forward
+

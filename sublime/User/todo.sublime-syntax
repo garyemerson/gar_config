@@ -1,0 +1,17 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: todo
+file_extensions:
+  - todo
+scope: text.plain
+contexts:
+  main:
+    - match: '\*'
+      scope: comment
+    - match: '^$'
+      push: old
+
+  old:
+    - match: '.*'
+      scope: comment

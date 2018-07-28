@@ -1,5 +1,0 @@
-{
-    "cmd": ["powershell", "-C", "& 'C:\\Users\\gamoh\\Dropbox\\Windows\\gar_bin\\Sublime Text x64\\Data\\Packages\\User\\cs_build_run.ps1' $file"],
-    "selector": "source.cs",
-    "syntax": "Packages/Rust/Cargo.sublime-syntax"
-}

@@ -5,17 +5,25 @@
 	],
 	"installed_packages":
 	[
+		"Ascetic color schemes",
 		"ayu",
 		"Boxy Theme",
-		"CTags",
+		"ColorHelper",
+		"ColorPick",
+		"Elm Language Support",
+		"Git",
 		"HexViewer",
 		"Indent XML",
 		"Missing Palette Commands",
 		"Origami",
 		"Package Control",
 		"PowerShell",
+		"Restart",
 		"SFTP",
 		"SideBarEnhancements",
-		"TOML"
+		"Terminus",
+		"Theme - Solarized Flat",
+		"TOML",
+		"TypeScript"
 	]
 }

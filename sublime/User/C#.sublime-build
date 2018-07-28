@@ -1,0 +1,14 @@
+{
+    "cmd": ["C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\csc.exe", "/debug", "/nologo", "$file"],
+    "selector": "source.cs",
+    "syntax": "Packages/Rust/Cargo.sublime-syntax",
+
+    "variants":
+    [
+        {
+            "name": "Run",
+            "shell_cmd": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\csc.exe\" /debug /nologo $file && \"${file_path}/${file_base_name}.exe\""
+            // "cmd": ["powershell", "-C", "& 'C:\\Users\\gamoh\\Dropbox\\Windows\\gar_bin\\Sublime Text x64\\Data\\Packages\\User\\cs_build_run.ps1' $file"]
+        }
+    ]
+}

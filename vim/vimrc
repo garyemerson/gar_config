@@ -25,7 +25,7 @@ noremap <silent> \ :nohlsearch<CR>
 " Enter command-line mode easier
 "noremap <Space> :
 noremap ; :
-noremap : ;
+"noremap : ;
  
 " Escape seems more useful but is far away, CTRL-C is close but not as useful
 noremap <C-c> <Esc>

@@ -1,0 +1,10 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Build Results
+scope: source.build_results
+hidden: true
+contexts:
+  main:
+    - match: '(^\[Cancelled\]$)?(^\[Finished.*)?(^\[shell_cmd:.*)?(^\[cmd:.*)?(^\[dir:.*)?(^\[path:.*)?'
+      scope: comment

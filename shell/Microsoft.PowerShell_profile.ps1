@@ -8,7 +8,7 @@ function cgrep { grep --color=always $args }
 
 # Adding to path
 $pathIncludeFile = [System.Environment]::ExpandEnvironmentVariables("%garPath%")
-$pathIncludeFile += "\path_include"
+$pathIncludeFile += "\shell_config\path_include"
 
 foreach ($line in (Get-Content $pathIncludeFile)) {
     $directory = [System.Environment]::ExpandEnvironmentVariables($line)
@@ -17,7 +17,7 @@ foreach ($line in (Get-Content $pathIncludeFile)) {
 
 # Setting environment variables
 $garPath = [System.Environment]::ExpandEnvironmentVariables("%garPath%")
-$environmentVarFile = $garPath + "\environment_var"
+$environmentVarFile = $garPath + "\shell_config\environment_var"
 
 # FortuneParser.exe "$garPath\shell_config\fortune.txt" | cowsay.exe
 
@@ -144,14 +144,12 @@ function fortune($Path) {
 
 function prompt {
     # Print current time
-    $t = Get-Date
-    Write-Host "[$($t.ToString("HH:mm:ss"))] " -NoNewLine -ForegroundColor DarkGray
+    $time = Get-Date
+    $time = "[$($time.ToString("HH:mm:ss"))]"
+    $cwd = "$($executionContext.SessionState.Path.CurrentLocation)"
+    $cwd = $cwd.Replace($HOME, "~")
+    Write-Host "$([char]0x250c)PS $time $cwd`n$([char]0x2514)" -ForegroundColor DarkGray -NoNewLine
 
-    $PrintPath = "$($executionContext.SessionState.Path.CurrentLocation)"
-    $PrintPath = $PrintPath.Replace($HOME, "~")
-
-    # Print CD
-    Write-Host "PS $PrintPath" -ForegroundColor DarkGray
     $PrompEndStr = "$([char]0x263b)"
     Write-Host "$($PrompEndStr * ($nestedPromptLevel + 1))" -NoNewLine -ForegroundColor DarkYellow
 
@@ -162,3 +160,9 @@ function prompt {
 
 
 if ((gcm test-path -ErrorAction:SilentlyContinue) -and (test-path c:\torus\torusprofile.ps1)) { . c:\torus\torusprofile.ps1 } # auto-generated-by-torus-client
+
+# Chocolatey profile
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}
