@@ -13,8 +13,8 @@ source $HOME/gar_bin/path_builder $HOME/gar_bin
 # Show the shell where java is
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 
-#export PS1='\[\e[0;37m\][\t] \u:\w\n\[\e[0;33m\]\342\230\273\[\e[0m\] '
 export PS1='\[\e[0;37m\]\342\224\214[\t] \u:\w\n\342\224\224\[\e[0;33m\]\342\230\273\[\e[0m\] '
+#export PS1='\[\e[0;37m\][\t] \u:\w\n\[\e[0;33m\]\342\230\273\[\e[0m\] '
 #export PS1='\[\e[0;37m\]\342\224\214[\t] \u:\w\n\342\224\224\[\e[0m\]\342\226\240 '
 
 # Keep history for longer
@@ -23,10 +23,9 @@ export HISTFILESIZE=200000
 
 export LESS='-i --clear-screen --max-forw-scroll=1 --max-back-scroll=1'
 export GOPATH=$HOME/workspaces/go_space
-
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-
 export LANG='en_US.UTF-8'
+export HISTTIMEFORMAT="%h %d %H:%M:%S "
 
 shopt -s histappend
 shopt -s nocaseglob
@@ -44,3 +43,4 @@ alias gdb='gdb -q'
 alias gitnew='git init && git add . && git commit -m "initial commit"'
 alias pstree='pstree -g 3'
 alias clip='pbcopy'
+alias jj='jobs'

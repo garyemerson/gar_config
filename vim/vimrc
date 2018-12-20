@@ -205,6 +205,13 @@ endif
 " Set colorscheme
 if has("gui_running")
     silent! colorscheme light
+elseif &diff
+    set diffopt=filler,context:1000000
+    hi DiffText ctermbg=229
+    hi DiffAdd ctermbg=194
+    hi DiffDelete ctermbg=254 ctermfg=lightgrey
+    hi DiffChange ctermbg=254
+    hi LineNr ctermfg=LightGray
 else
     silent! colorscheme light
 endif

@@ -7,7 +7,9 @@ file_extensions:
 scope: text.plain
 contexts:
   main:
-    - match: '\*'
+    - match: '^\s*[-*o]'
+      scope: comment
+    - match: '^=+$'
       scope: comment
     - match: '^$'
       push: old

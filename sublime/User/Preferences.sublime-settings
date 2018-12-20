@@ -9,13 +9,13 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"SublimeLinter",
-		"SublimeLinter-csslint",
+		"Elm Language Support",
 		"Vintage"
 	],
 	"scroll_past_end": true,
 	"show_encoding": true,
 	"show_errors_inline": false,
+	"show_line_endings": true,
 	"tab_completion": false,
 	"tabs_small": true,
 	"theme": "Boxy Solarized Light.sublime-theme",

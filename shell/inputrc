@@ -25,6 +25,7 @@ set completion-ignore-case on
 
 TAB: menu-complete
 "\e[Z": "\e-1\C-i"
+#"\e[Z": complete
 
 # From https://unix.stackexchange.com/a/20830
 # Key bindings, up/down arrow searches through history

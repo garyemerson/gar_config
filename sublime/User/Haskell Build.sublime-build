@@ -1,0 +1,5 @@
+{
+    "shell_cmd": "ghc $file",
+    "selector": "source.haskell",
+    "syntax": "build_results.sublime-syntax",
+}
