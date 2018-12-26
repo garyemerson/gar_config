@@ -8,9 +8,11 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [core]
-	pager = less -R
+    pager = less -I -R --clear-screen --max-forw-scroll=1 --max-back-scroll=1
     autocrlf = false
 	excludesfile = /Users/Garrett/.gitignore_global
+[pager]
+    branch = false
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
