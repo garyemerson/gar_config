@@ -1,0 +1,24 @@
+* dropbox
+* chrome
+* sublime
+    * LP Theme
+    * Change tab switch shortcut
+* Vim
+* Disable Caps Lock
+* Reverse Scrolling
+* Change cmd, PowerShell and default console color/font
+* Install GnuWin:
+    * less
+        * env var less=-i
+* Setup cmd env/startup script:
+    * use doskey to output help cmd to less
+* Setup PowerShell env/startup script:
+    * make fn to output help cmd to less
+* f.lux
+* Frhed hex viewer/editor
+* Process Explorer
+* SpeedFan
+* cowsay
+* fortune
+* Microsoft File Checksum Integrity Verifier (FCIV)
+* 7-Zip
