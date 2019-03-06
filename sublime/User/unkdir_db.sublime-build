@@ -1,0 +1,6 @@
+{
+    "shell_cmd": "cat $file | ssh root@unkdir.com \"cat | su -c 'psql Garrett' - postgres\"",
+    "selector": "source.sql",
+    "syntax": "Packages/Rust/Cargo.sublime-syntax",
+    "word_wrap": "false",
+}

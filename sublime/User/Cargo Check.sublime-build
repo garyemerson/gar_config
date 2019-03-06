@@ -1,0 +1,12 @@
+{
+    "shell_cmd": "cargo check",
+    "selector": "source.rust",
+    "syntax": "build_results.sublime-syntax",
+    "variants":
+    [
+        {
+            "name": "Release",
+            "shell_cmd": "cargo check --release",
+        },
+    ]
+}

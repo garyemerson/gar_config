@@ -10,6 +10,8 @@
 	"ignored_packages":
 	[
 		"Elm Language Support",
+		"Origami",
+		"TypeScript",
 		"Vintage"
 	],
 	"scroll_past_end": true,
