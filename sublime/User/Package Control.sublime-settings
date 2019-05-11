@@ -13,6 +13,7 @@
 		"Elm Language Support",
 		"Git",
 		"HexViewer",
+		"IDL-Syntax",
 		"Indent XML",
 		"MarkdownLivePreview",
 		"Missing Palette Commands",
@@ -26,6 +27,7 @@
 		"Terminus",
 		"Theme - Solarized Flat",
 		"TOML",
-		"TypeScript"
+		"TypeScript",
+		"TypeScript Syntax"
 	]
 }

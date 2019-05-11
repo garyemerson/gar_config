@@ -1,20 +1,20 @@
 {
-    "cmd": ["C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\csc.exe", "/debug-", "/nologo", "$file"],
+    "cmd": ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\Roslyn\\csc.exe", "/debug-", "/nologo", "$file"],
     "selector": "source.cs",
     "syntax": "Packages/Rust/Cargo.sublime-syntax",
     "variants":
     [
         {
             "name": "Build Library",
-            "shell_cmd": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\csc.exe\" /target:library /debug- /nologo $file && \"${file_path}/${file_base_name}.exe\""
+            "shell_cmd": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\Roslyn\\csc.exe\" /target:library /debug- /nologo $file && \"${file_path}/${file_base_name}.exe\""
+        },
+        {
+            "name": "Run",
+            "shell_cmd": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\Roslyn\\csc.exe\" /debug- /nologo $file && \"${file_path}/${file_base_name}.exe\""
         },
         {
             "name": "Build Library (Mac)",
             "shell_cmd": "/Library/Frameworks/Mono.framework/Versions/Current/Commands/csc /target:library /debug- /nologo $file"
-        },
-        {
-            "name": "Run",
-            "shell_cmd": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\csc.exe\" /debug- /nologo $file && \"${file_path}/${file_base_name}.exe\""
         },
         {
             "name": "Run (Mac)",

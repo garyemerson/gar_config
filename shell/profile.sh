@@ -20,12 +20,12 @@ export PS1='\[\e[0;37m\]\342\224\214[\t] \u:\w\n\342\224\224\[\e[0;33m\]\342\230
 # Keep history for longer
 export HISTSIZE=100000
 export HISTFILESIZE=200000
+export HISTTIMEFORMAT="[%F %T] "
 
 export LESS='-i --clear-screen --max-forw-scroll=1 --max-back-scroll=1'
 export GOPATH=$HOME/workspaces/go_space
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 export LANG='en_US.UTF-8'
-export HISTTIMEFORMAT="%h %d %H:%M:%S "
 
 shopt -s histappend
 shopt -s nocaseglob
@@ -33,7 +33,8 @@ shopt -s nocaseglob
 alias cgrep='grep --color=always'
 alias cp='cp -i'
 alias dir='ls'
-alias h='history'
+alias h='HISTTIMEFORMAT= history'
+alias hh='history'
 alias ls='ls -F'
 alias tree='tree -F'
 alias mv='mv -i'
