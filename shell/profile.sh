@@ -8,14 +8,14 @@ export PATH="$PATH:$HOME/gar_bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:/usr/local/pgsql/bin"
 
-source $HOME/gar_bin/path_builder $HOME/gar_bin
+if [ -e $HOME/gar_bin/path_builder ]; then
+    source $HOME/gar_bin/path_builder $HOME/gar_bin
+fi
 
 # Show the shell where java is
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 
 export PS1='\[\e[0;37m\]\342\224\214[\t] \u:\w\n\342\224\224\[\e[0;33m\]\342\230\273\[\e[0m\] '
-#export PS1='\[\e[0;37m\][\t] \u:\w\n\[\e[0;33m\]\342\230\273\[\e[0m\] '
-#export PS1='\[\e[0;37m\]\342\224\214[\t] \u:\w\n\342\224\224\[\e[0m\]\342\226\240 '
 
 # Keep history for longer
 export HISTSIZE=100000
@@ -41,8 +41,10 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias v='vim'
 alias gdb='gdb -q'
-alias gitnew='git init && git add . && git commit -m "initial commit"'
 alias pstree='pstree -g 3'
 alias clip='pbcopy'
 alias jj='jobs'
 alias utcnow='date -u "+%Y-%m-%dT%H:%M:%SZ"'
+function gssh() {
+    ssh -t $@ "bash --rcfile <(echo $(cat ~/.profile | gzip | base64 ) | base64 --decode | gunzip)"
+}
