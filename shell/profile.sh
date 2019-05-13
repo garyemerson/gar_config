@@ -46,7 +46,7 @@ alias clip='pbcopy'
 alias jj='jobs'
 alias utcnow='date -u "+%Y-%m-%dT%H:%M:%SZ"'
 function gssh() {
-    ssh -t $@ "bash --rcfile <(echo $(cat ~/.profile | gzip | base64 ) | base64 --decode | gunzip)"
+    ssh -t $@ "bash --rcfile <(echo $(cat ~/.profile | gzip | base64 | tr -d \"\\r\\n\") | base64 --decode | gunzip)"
 }
 function gscript {
     #tmp=$(mktemp)
