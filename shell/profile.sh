@@ -48,3 +48,23 @@ alias utcnow='date -u "+%Y-%m-%dT%H:%M:%SZ"'
 function gssh() {
     ssh -t $@ "bash --rcfile <(echo $(cat ~/.profile | gzip | base64 ) | base64 --decode | gunzip)"
 }
+function gscript {
+    #tmp=$(mktemp)
+    #script -q /dev/null $@ > $tmp
+    #cat $tmp
+    script -q /dev/null $@
+}
+
+# INPUTRC
+bind 'set completion-ignore-case on'
+
+bind 'TAB:menu-complete'
+bind '"\e[Z":"\e-1\C-i"'
+#"\e[Z": complete
+
+# From https://unix.stackexchange.com/a/20830
+# Key bindings, up/down arrow searches through history
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+bind '"\eOA":history-search-backward'
+bind '"\eOB":history-search-forward'
