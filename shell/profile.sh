@@ -24,7 +24,7 @@ export HISTTIMEFORMAT="[%F %T] "
 
 export LESS='-i --clear-screen --max-forw-scroll=1 --max-back-scroll=1'
 export GOPATH=$HOME/workspaces/go_space
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a && history -c && history -r; $PROMPT_COMMAND"
 export LANG='en_US.UTF-8'
 
 shopt -s histappend
@@ -45,14 +45,17 @@ alias pstree='pstree -g 3'
 alias clip='pbcopy'
 alias jj='jobs'
 alias utcnow='date -u "+%Y-%m-%dT%H:%M:%SZ"'
-function gssh() {
+gssh() {
     ssh -t $@ "bash --rcfile <(echo $(cat ~/.profile | gzip | base64 | tr -d \"\\r\\n\") | base64 --decode | gunzip)"
 }
-function gscript {
+gscript() {
     #tmp=$(mktemp)
     #script -q /dev/null $@ > $tmp
     #cat $tmp
     script -q /dev/null $@
+}
+du-fmt() {
+    du -sh "$@" | sort -hr
 }
 
 # INPUTRC
