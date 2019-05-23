@@ -7,6 +7,8 @@ file_extensions:
 scope: text.plain
 contexts:
   main:
+    # - match: '\('
+    #   push: paren
     - match: '^\s*[-*o>•▶▬]'
       scope: comment
     - match: '^=+$'
@@ -14,6 +16,14 @@ contexts:
     - match: '^$'
       push: old
 
+  # paren:
+  #   - meta_scope: comment
+  #   - match: '\('
+  #     push: paren
+  #   - match: '\)'
+  #     pop: true
+
   old:
-    - match: '.*'
-      scope: comment
+    - meta_scope: comment
+    # - match: '.*'
+    #   scope: comment

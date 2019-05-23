@@ -1,6 +1,10 @@
 #Write-Output "Sourcing PowerShell profile"
 $env:ProfileSourced = $true
 
+if (Get-Command Set-Site -ErrorAction SilentlyContinue) {
+    Set-Site SN1 -ErrorAction SilentlyContinue
+}
+
 # Alias functions
 #set-alias vim 'C:\Program Files (x86)\Vim\vim74\gvim.exe'
 function v { vim $args }
