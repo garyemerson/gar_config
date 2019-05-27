@@ -66,13 +66,14 @@ bench-url() {
 # INPUTRC
 bind 'set completion-ignore-case on'
 
-bind 'TAB:menu-complete'
-bind '"\e[Z":"\e-1\C-i"'
+bind 'TAB: menu-complete'
+bind '"\e[Z": "\e-1\C-i"'
 #"\e[Z": complete
 
 # From https://unix.stackexchange.com/a/20830
 # Key bindings, up/down arrow searches through history
-bind '"\e[A":history-search-backward'
-bind '"\e[B":history-search-forward'
-bind '"\eOA":history-search-backward'
-bind '"\eOB":history-search-forward'
+#bind '"\e[A": "echo foobar\n"'
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+bind '"\eOA": history-search-backward'
+bind '"\eOB": history-search-forward'
