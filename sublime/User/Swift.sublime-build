@@ -1,0 +1,12 @@
+{
+    "shell_cmd": "swiftc $file",
+    "selector": "source.swift",
+    "syntax": "build_results.sublime-syntax",
+    "variants":
+    [
+        {
+            "name": "Run",
+            "shell_cmd": "swift $file",
+        },
+    ]
+}

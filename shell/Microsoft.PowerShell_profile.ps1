@@ -157,6 +157,10 @@ function prompt {
     $PrompEndStr = "$([char]0x263b)"
     Write-Host "$($PrompEndStr * ($nestedPromptLevel + 1))" -NoNewLine -ForegroundColor DarkYellow
 
+    # temporarily overwrite Write-Host to avoid Set-Site from generating output
+    # function Write-Host {}
+    # Set-Site sn1
+
     # Do this otherwise PowerShell doesn't know if you actually printed a
     # prompt and will automatically add its own prompt
     return " "
