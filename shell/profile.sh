@@ -1,7 +1,3 @@
-# MacPorts Installer addition on 2014-11-04_at_14:23:26: adding an appropriate
-# PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-
 export PATH="/usr/local/bin:$PATH" # Use Exuberant CTAGS
 export PATH="$PATH:/Applications/Sublime Text.app/Contents/SharedSupport/bin" # sublime util subl
 export PATH="$PATH:$HOME/gar_bin"
@@ -47,7 +43,7 @@ alias clip='pbcopy'
 alias jj='jobs'
 alias utcnow='date -u "+%Y-%m-%dT%H:%M:%SZ"'
 gssh() {
-    ssh -t $@ "bash --rcfile <(echo $(cat ~/.profile | gzip | base64 | tr -d \"\\r\\n\") | base64 --decode | gunzip)"
+    ssh -t $@ "bash --rcfile <(echo $(cat $HOME/.profile | gzip | base64 | tr -d \"\\r\\n\") | base64 --decode | gunzip)"
 }
 gscript() {
     #tmp=$(mktemp)
