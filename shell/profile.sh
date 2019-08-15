@@ -14,6 +14,7 @@ export PS1='\[\e[0;37m\]\342\224\214[\t] \u@\H:\w\n\342\224\224\[\e[0;33m\]\342\
 export HISTSIZE=100000
 export HISTFILESIZE=200000
 export HISTTIMEFORMAT="[%F %T] "
+export HISTIGNORE="bg:fg"
 
 export LESS='-i --clear-screen --max-forw-scroll=1 --max-back-scroll=1'
 export GOPATH=$HOME/workspaces/go_space
@@ -22,6 +23,16 @@ export LANG='en_US.UTF-8'
 
 shopt -s histappend
 shopt -s nocaseglob
+
+# Save multi-line commands as one command
+shopt -s cmdhist
+
+# Prepend cd to directory names automatically
+shopt -s autocd 2> /dev/null
+# Correct spelling errors during tab-completion
+shopt -s dirspell 2> /dev/null
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell 2> /dev/null
 
 alias cgrep='grep --color=always'
 alias cp='cp -i'
@@ -37,6 +48,7 @@ alias v='vim'
 alias gdb='gdb -q'
 alias pstree='pstree -g 3'
 alias clip='pbcopy'
+# jobs | fzf --height 10 --reverse
 alias jj='jobs'
 alias utcnow='date -u "+%Y-%m-%dT%H:%M:%SZ"'
 gssh() {
@@ -56,11 +68,9 @@ bench-url() {
     curl -s -w 'Testing Website Response Time for %{url_effective}\n\nDNS Lookup Time:\t%{time_namelookup}\nConnect Time:\t\t%{time_connect}\nPre-transfer Time:\t%{time_pretransfer}\nStart-transfer Time:\t%{time_starttransfer}\n\nTotal Time:\t\t%{time_total}\n' -o /dev/null $1
 }
 
-
 #
 # INPUTRC
 #
-
 bind 'set completion-ignore-case on'
 
 bind 'TAB: menu-complete'
