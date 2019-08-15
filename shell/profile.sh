@@ -8,10 +8,7 @@ if [ -e $HOME/gar_bin/path_builder ]; then
     source $HOME/gar_bin/path_builder $HOME/gar_bin
 fi
 
-# Show the shell where java is
-export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
-
-export PS1='\[\e[0;37m\]\342\224\214[\t] \u:\w\n\342\224\224\[\e[0;33m\]\342\230\273\[\e[0m\] '
+export PS1='\[\e[0;37m\]\342\224\214[\t] \u@\H:\w\n\342\224\224\[\e[0;33m\]\342\230\273\[\e[0m\] '
 
 # Keep history for longer
 export HISTSIZE=100000
@@ -59,12 +56,19 @@ bench-url() {
     curl -s -w 'Testing Website Response Time for %{url_effective}\n\nDNS Lookup Time:\t%{time_namelookup}\nConnect Time:\t\t%{time_connect}\nPre-transfer Time:\t%{time_pretransfer}\nStart-transfer Time:\t%{time_starttransfer}\n\nTotal Time:\t\t%{time_total}\n' -o /dev/null $1
 }
 
+
+#
 # INPUTRC
+#
+
 bind 'set completion-ignore-case on'
 
 bind 'TAB: menu-complete'
 bind '"\e[Z": "\e-1\C-i"'
 #"\e[Z": complete
+
+# Display matches for ambiguous patterns at first tab press
+#bind "set show-all-if-ambiguous on"
 
 # From https://unix.stackexchange.com/a/20830
 # Key bindings, up/down arrow searches through history
