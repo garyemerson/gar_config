@@ -8,7 +8,7 @@ contexts:
   main:
     # - match: '(^\[Cancelled\]$)?(^\[Finished.*)?(^\[shell_cmd:.*)?(^\[cmd:.*)?(^\[dir:.*)?(^\[path:.*)?'
     #   scope: comment
-    - match: '^\[Finished'
+    - match: '^\[Finished|^\[Cancelled'
       push: info
 
   info:
