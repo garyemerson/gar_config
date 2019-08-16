@@ -58,6 +58,9 @@ bench-url() {
     # from https://www.tecmint.com/test-website-loading-speed-in-linux-terminal/
     curl -s -w 'Testing Website Response Time for %{url_effective}\n\nDNS Lookup Time:\t%{time_namelookup}\nConnect Time:\t\t%{time_connect}\nPre-transfer Time:\t%{time_pretransfer}\nStart-transfer Time:\t%{time_starttransfer}\n\nTotal Time:\t\t%{time_total}\n' -o /dev/null $1
 }
+transfer-config() {
+    scp ~/{.gitconfig,.tmux.conf,.profile,.vimrc} $@
+}
 
 # INPUTRC
 bind 'set completion-ignore-case on'
