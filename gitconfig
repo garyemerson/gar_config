@@ -3,10 +3,6 @@
 	email = gmohammadioun@gmail.com
 [color]
 	ui = auto
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
 [core]
     pager = less -I -R --clear-screen --max-forw-scroll=1 --max-back-scroll=1
     autocrlf = false
