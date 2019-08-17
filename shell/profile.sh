@@ -74,19 +74,21 @@ transfer-config() {
 #
 # INPUTRC
 #
-bind 'set completion-ignore-case on'
+if [ -t 1 ]; then
+    bind 'set completion-ignore-case on'
 
-bind 'TAB: menu-complete'
-bind '"\e[Z": "\e-1\C-i"'
-#"\e[Z": complete
+    bind 'TAB: menu-complete'
+    bind '"\e[Z": "\e-1\C-i"'
+    #"\e[Z": complete
 
-# Display matches for ambiguous patterns at first tab press
-#bind "set show-all-if-ambiguous on"
+    # Display matches for ambiguous patterns at first tab press
+    #bind "set show-all-if-ambiguous on"
 
-# From https://unix.stackexchange.com/a/20830
-# Key bindings, up/down arrow searches through history
-#bind '"\e[A": "echo foobar\n"'
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
-bind '"\eOA": history-search-backward'
-bind '"\eOB": history-search-forward'
+    # From https://unix.stackexchange.com/a/20830
+    # Key bindings, up/down arrow searches through history
+    #bind '"\e[A": "echo foobar\n"'
+    bind '"\e[A": history-search-backward'
+    bind '"\e[B": history-search-forward'
+    bind '"\eOA": history-search-backward'
+    bind '"\eOB": history-search-forward'
+fi
