@@ -48,9 +48,13 @@ alias v='vim'
 alias gdb='gdb -q'
 alias pstree='pstree -g 3'
 alias clip='pbcopy'
-# jobs | fzf --height 10 --reverse
-alias jj='jobs'
 alias utcnow='date -u "+%Y-%m-%dT%H:%M:%SZ"'
+jj() {
+    target_job=$(jobs | fzf --height 10 --reverse | sed -E 's/\[([0-9]+)\].*/\1/')
+    if [ ! -z "$target_job" ]; then
+        fg $target_job
+    fi
+}
 gssh() {
     ssh -t $@ "bash --rcfile <(echo $(cat $HOME/.profile | gzip | base64 | tr -d \"\\r\\n\") | base64 --decode | gunzip)"
 }
@@ -87,6 +91,7 @@ if [ -t 1 ]; then
     # From https://unix.stackexchange.com/a/20830
     # Key bindings, up/down arrow searches through history
     #bind '"\e[A": "echo foobar\n"'
+    bind -x '"\C-j": "jj"'
     bind '"\e[A": history-search-backward'
     bind '"\e[B": history-search-forward'
     bind '"\eOA": history-search-backward'
