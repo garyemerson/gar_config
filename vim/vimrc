@@ -28,9 +28,9 @@ noremap ; :
 "noremap : ;
  
 " Escape seems more useful but is far away, CTRL-C is close but not as useful
-noremap <C-c> <Esc>
+"noremap <C-c> <Esc>
 "" TODO: For some reason mapping escape makes vim enter in the middle of a 2c command
-noremap <Esc> <C-c>
+"noremap <Esc> <C-c>
  
 " Scroll intuitively on OS X Terminal
 noremap OA <C-y>
