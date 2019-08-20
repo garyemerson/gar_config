@@ -50,7 +50,7 @@ alias pstree='pstree -g 3'
 alias clip='pbcopy'
 alias utcnow='date -u "+%Y-%m-%dT%H:%M:%SZ"'
 jj() {
-    target_job=$(jobs | fzf --height 10 --reverse | sed -E 's/\[([0-9]+)\].*/\1/')
+    target_job=$(jobs | fzf --height 10 --reverse --color=light | sed -E 's/\[([0-9]+)\].*/\1/')
     if [ ! -z "$target_job" ]; then
         fg $target_job
     fi
