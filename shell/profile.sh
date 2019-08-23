@@ -1,4 +1,3 @@
-export PATH="/usr/local/bin:$PATH" # Use Exuberant CTAGS
 export PATH="$PATH:/Applications/Sublime Text.app/Contents/SharedSupport/bin" # sublime util subl
 export PATH="$PATH:$HOME/gar_bin"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -17,9 +16,10 @@ export HISTTIMEFORMAT="[%F %T] "
 export HISTIGNORE="bg:fg"
 
 export LESS='-i --clear-screen --max-forw-scroll=1 --max-back-scroll=1'
-export GOPATH=$HOME/workspaces/go_space
-export PROMPT_COMMAND="history -a && history -c && history -r; $PROMPT_COMMAND"
 export LANG='en_US.UTF-8'
+
+unset PROMPT_COMMAND
+export PROMPT_COMMAND="history -a && history -c && history -r; $PROMPT_COMMAND"
 
 shopt -s histappend
 shopt -s nocaseglob
