@@ -6,7 +6,7 @@
 [core]
     pager = less -I -R --clear-screen --max-forw-scroll=1 --max-back-scroll=1
     autocrlf = false
-	excludesfile = /Users/Garrett/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [pager]
     branch = false
 [color "diff-highlight"]
