@@ -1,0 +1,29 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: list
+# file_extensions:
+#   - todo
+scope: text.plain
+contexts:
+  main:
+    # - match: '\('
+    #   push: paren
+    - match: '^\s*[-*o>•▶▬]'
+      scope: comment
+    - match: '^=+$'
+      scope: comment
+    # - match: '^$'
+    #   push: old
+
+  # paren:
+  #   - meta_scope: comment
+  #   - match: '\('
+  #     push: paren
+  #   - match: '\)'
+  #     pop: true
+
+  old:
+    - meta_scope: comment
+    # - match: '.*'
+    #   scope: comment
