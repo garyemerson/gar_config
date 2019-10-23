@@ -1,0 +1,42 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: work_log
+# file_extensions:
+#   - work_log
+scope: text.plain
+contexts:
+  main:
+    - match: '.'
+      push: Packages/User/notes.sublime-syntax
+    # - match: '^\n'
+    #   push: blank1
+
+    # - clear_scopes: true
+    # - meta_scope: work_todo_block
+    # - match: '\n'
+    #   scope: work_todo_block
+    # - match: '^.*[^\s].*\n'
+    #   scope: work_todo_block
+
+  blank1:
+    # - clear_scopes: true
+    # - meta_scope: work_todo_block1
+    - match: '(?=[^\s])'
+      pop: true
+    - match: '^\n'
+      push: blank2
+
+  blank2:
+    # - clear_scopes: true
+    - meta_scope: work_todo_block2
+    - match: '(?=[^\s])'
+      pop: true
+  #   - match: '^\n'
+  #     push: blank3
+
+  # blank3:
+  #   # - clear_scopes: true
+  #   - meta_scope: work_todo_block3
+  #   - match: '[^\s]'
+  #     set: main

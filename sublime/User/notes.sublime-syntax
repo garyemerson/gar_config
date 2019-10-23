@@ -1,7 +1,7 @@
 %YAML 1.2
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
-name: list
+name: notes
 # file_extensions:
 #   - todo
 scope: text.plain
@@ -9,9 +9,11 @@ contexts:
   main:
     # - match: '\('
     #   push: paren
-    - match: '^\s*[-*o>•▶▬]'
-      scope: comment
     - match: '^=+$'
+      scope: comment
+    - match: '^\-+$'
+      scope: comment
+    - match: '^\s*[-*>•▶▬]'
       scope: comment
     # - match: '^$'
     #   push: old
