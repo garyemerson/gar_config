@@ -7,7 +7,7 @@ if [ -e $HOME/gar_bin/path_builder ]; then
     source $HOME/gar_bin/path_builder $HOME/gar_bin
 fi
 
-export PS1='\[\e[0;37m\]\342\224\214[\t] \u@\H:\w\n\342\224\224\[\e[0;33m\]\342\230\273\[\e[0m\] '
+export PS1='\[\e[0;2m\]\342\224\214[\t] \u@\H:\w\n\342\224\224\[\e[0;33m\]\342\230\273\[\e[0m\] '
 
 # Keep history for longer
 export HISTSIZE=100000
