@@ -1,11 +1,15 @@
 {
-    "shell_cmd": "cargo check",
+    "shell_cmd": "cargo build --release",
     "selector": "source.rust",
     "syntax": "build_results.sublime-syntax",
     "variants":
     [
         {
-            "name": "Release",
+            "name": "run",
+            "shell_cmd": "cargo run --release",
+        },
+        {
+            "name": "check",
             "shell_cmd": "cargo check --release",
         },
     ]
