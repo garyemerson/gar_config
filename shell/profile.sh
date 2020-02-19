@@ -75,7 +75,7 @@ transfer-config() {
     scp -r ~/{.gitconfig,.tmux.conf,.profile,.vimrc,.vim} $@
 }
 foo() {
-    echo -n $(PWD)
+    echo -n $PWD
     #echo -n $(printf '%08d' $RANDOM)
     #sleep 1
     read -n 1 -s -r
