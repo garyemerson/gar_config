@@ -74,6 +74,13 @@ bench-url() {
 transfer-config() {
     scp -r ~/{.gitconfig,.tmux.conf,.profile,.vimrc,.vim} $@
 }
+foo() {
+    echo -n $(PWD)
+    #echo -n $(printf '%08d' $RANDOM)
+    #sleep 1
+    read -n 1 -s -r
+    echo -ne "\r\e[K"
+}
 
 #
 # INPUTRC
@@ -92,6 +99,7 @@ if [ -t 1 ]; then
     # Key bindings, up/down arrow searches through history
     #bind '"\e[A": "echo foobar\n"'
     bind -x '"\C-j": "jj"'
+    bind -x '"\C-f": "foo"'
     bind '"\e[A": history-search-backward'
     bind '"\e[B": history-search-forward'
     bind '"\eOA": history-search-backward'
