@@ -7,23 +7,10 @@ file_extensions:
 scope: text.plain
 contexts:
   main:
-    - match: '^\s*-+$'
-      scope: comment
-    - match: '^\s*[-*o>•▶▬]'
-      scope: comment
-    - match: '^=+$'
-      scope: comment
-    - match: '^$'
-      push: old
-    # - match: '\('
-    #   push: paren
-
-  # paren:
-  #   - meta_scope: comment
-  #   - match: '\('
-  #     push: paren
-  #   - match: '\)'
-  #     pop: true
-
+    - match: ""
+      push: "Packages/User/notes.sublime-syntax"
+      with_prototype:
+        - match: "^$"
+          push: old
   old:
     - meta_scope: comment

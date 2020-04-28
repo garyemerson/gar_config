@@ -3,29 +3,19 @@
 # http://www.sublimetext.com/docs/3/syntax.html
 name: notes
 # file_extensions:
-#   - todo
+#   - notes
 scope: text.plain
 contexts:
   main:
-    # - match: '\('
-    #   push: paren
-    - match: '^=+$'
+    - match: '^\s*[-=]+$'
       scope: comment
-    - match: '^\-+$'
+    - match: '^\s*[-*o>•▶▬] '
       scope: comment
-    - match: '^\s*[-*>•▶▬]'
-      scope: comment
-    # - match: '^$'
-    #   push: old
-
+  #   - match: '\('
+  #     push: paren
   # paren:
   #   - meta_scope: comment
   #   - match: '\('
   #     push: paren
   #   - match: '\)'
   #     pop: true
-
-  old:
-    - meta_scope: comment
-    # - match: '.*'
-    #   scope: comment
