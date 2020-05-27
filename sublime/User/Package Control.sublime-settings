@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"ApacheConf",
 		"Ascetic color schemes",
 		"ayu",
 		"ColorHelper",
