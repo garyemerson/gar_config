@@ -1,0 +1,5 @@
+{
+    "shell_cmd": "python3 $file",
+    "selector": "source.python",
+    "syntax": "build_results.sublime-syntax",
+}
