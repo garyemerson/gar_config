@@ -16,6 +16,7 @@ export HISTTIMEFORMAT="[%F %T] "
 export HISTIGNORE="bg:fg"
 
 export LESS='-i --clear-screen --max-forw-scroll=1 --max-back-scroll=1'
+export SYSTEMD_LESS="${LESS}R"
 export LANG='en_US.UTF-8'
 
 unset PROMPT_COMMAND
