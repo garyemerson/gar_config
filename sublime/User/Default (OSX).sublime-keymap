@@ -1,4 +1,7 @@
 [
+    { "keys": ["ctrl+backquote"], "command": "toggle_terminus_panel" },
+    { "keys": ["ctrl+shift+backquote"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+
     { "keys": ["ctrl+pagedown"], "command": "next_view_in_stack" },
     { "keys": ["ctrl+pageup"], "command": "prev_view_in_stack" },
 
