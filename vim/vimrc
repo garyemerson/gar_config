@@ -147,6 +147,7 @@ set expandtab                           " Use spaces instead of tabs
 set tabstop=4                           " Set tab widths
 set shiftwidth=4                        " Set width of indentation
 set softtabstop=4                       " Make backspacing over tabs delete the whole tab when
+set breakindent
                                         " expandtab is set (i.e. when using spaces instead of tabs)
 if has("clipboard")                     " If there's clipboard support then setup to use system clipboard
     set clipboard=unnamed
