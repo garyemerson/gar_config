@@ -16,7 +16,7 @@ export HISTTIMEFORMAT="[%F %T] "
 export HISTIGNORE="bg:fg"
 
 export LESS='-i --clear-screen --max-forw-scroll=1 --max-back-scroll=1'
-export SYSTEMD_LESS="${LESS}R"
+export SYSTEMD_LESS="${LESS} R"
 export LANG='en_US.UTF-8'
 
 unset PROMPT_COMMAND
@@ -47,7 +47,6 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias v='vim'
 alias gdb='gdb -q'
-alias pstree='pstree -g 3'
 alias clip='pbcopy'
 alias utcnow='date -u "+%Y-%m-%dT%H:%M:%SZ"'
 jj() {
