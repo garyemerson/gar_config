@@ -10,41 +10,29 @@ fi
 export PS1='\[\e[0;2m\]\342\224\214[\t] \u@\H:\w\n\342\224\224\[\e[0;33m\]\342\230\273\[\e[0m\] '
 
 # Keep history for longer
-export HISTSIZE=100000
-export HISTFILESIZE=200000
-export HISTTIMEFORMAT="[%F %T] "
-export HISTIGNORE="bg:fg"
-
-export LESS='-i --clear-screen --max-forw-scroll=1 --max-back-scroll=1'
-export SYSTEMD_LESS="${LESS} R"
-export LANG='en_US.UTF-8'
+export HISTSIZE=100000 HISTFILESIZE=200000 HISTTIMEFORMAT="[%F %T] " HISTIGNORE="bg:fg"
 
 unset PROMPT_COMMAND
-export PROMPT_COMMAND="history -a && history -c && history -r; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a && history -c && history -r; $PROMPT_COMMAND" \
+    LESS='-i --clear-screen --max-forw-scroll=1 --max-back-scroll=1' \
+    SYSTEMD_LESS="${LESS} R"
+    LANG='en_US.UTF-8'
 
-shopt -s histappend
-shopt -s nocaseglob
+shopt -s histappend nocaseglob
 
 # Save multi-line commands as one command
 shopt -s cmdhist
 
 # Prepend cd to directory names automatically
-shopt -s autocd 2> /dev/null
 # Correct spelling errors during tab-completion
-shopt -s dirspell 2> /dev/null
 # Correct spelling errors in arguments supplied to cd
-shopt -s cdspell 2> /dev/null
+shopt -s autocd dirspell cdspell 2>/dev/null
 
 alias cgrep='grep --color=always'
-alias cp='cp -i'
-alias dir='ls'
-alias h='HISTTIMEFORMAT= history'
-alias hh='history'
-alias ls='ls -F'
-alias ll='ls -lh'
+alias h='HISTTIMEFORMAT= history' hh='history'
+alias ls='ls -F' ll='ls -lh' dir='ls'
 alias tree='tree -F'
-alias mv='mv -i'
-alias rm='rm -i'
+alias mv='mv -i' cp='cp -i' rm='rm -i'
 alias v='vim'
 alias gdb='gdb -q'
 alias clip='pbcopy'
@@ -74,13 +62,6 @@ bench-url() {
 transfer-config() {
     scp -r ~/{.gitconfig,.tmux.conf,.profile,.vimrc,.vim} "$@"
 }
-ctrl-f() {
-    echo -n $PWD
-    #echo -n $(printf '%08d' $RANDOM)
-    #sleep 1
-    read -n 1 -s -r
-    echo -ne "\r\e[K"
-}
 
 #
 # INPUTRC
@@ -99,7 +80,7 @@ if [ -t 1 ]; then
     # Key bindings, up/down arrow searches through history
     #bind '"\e[A": "echo foobar\n"'
     bind -x '"\C-j": "jj"'
-    bind -x '"\C-f": "ctrl-f"'
+    bind -x '"\C-f": echo -n $PWD; read -n 1 -s -r; echo -ne "\r\e[K"'
     bind '"\e[A": history-search-backward'
     bind '"\e[B": history-search-forward'
     bind '"\eOA": history-search-backward'
