@@ -9,6 +9,8 @@ contexts:
   main:
     - match: '^\s*[-=]+$'
       scope: comment
+    - match: '^\s*[-=]+DONE[-=]+$'
+      scope: comment
     - match: '^\s*[-*o>•▶▬] '
       scope: comment
   #   - match: '\('

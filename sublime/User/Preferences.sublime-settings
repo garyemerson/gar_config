@@ -23,5 +23,5 @@
 	"theme": "Adaptive.sublime-theme",
 	"theme_find_panel_atomized": true,
 	"theme_tab_selected_label_bold": true,
-	"translate_tabs_to_spaces": true
+	"translate_tabs_to_spaces": true,
 }
