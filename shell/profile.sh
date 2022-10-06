@@ -28,7 +28,6 @@ shopt -s cmdhist
 # Correct spelling errors in arguments supplied to cd
 shopt -s autocd dirspell cdspell 2>/dev/null
 
-alias tmux='tmx2'
 alias cgrep='grep --color=always'
 alias h='HISTTIMEFORMAT= history' hh='history'
 alias ls='ls -F' ll='ls -lh' dir='ls'
