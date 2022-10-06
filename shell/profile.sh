@@ -28,6 +28,7 @@ shopt -s cmdhist
 # Correct spelling errors in arguments supplied to cd
 shopt -s autocd dirspell cdspell 2>/dev/null
 
+alias tmux='tmx2'
 alias cgrep='grep --color=always'
 alias h='HISTTIMEFORMAT= history' hh='history'
 alias ls='ls -F' ll='ls -lh' dir='ls'
@@ -80,7 +81,7 @@ if [ -t 1 ]; then
     # Key bindings, up/down arrow searches through history
     #bind '"\e[A": "echo foobar\n"'
     bind -x '"\C-j": "jj"'
-    bind -x '"\C-f": echo -n $PWD; read -n 1 -s -r; echo -ne "\r\e[K"'
+    #bind -x '"\C-f": echo -n $PWD; read -n 1 -s -r; echo -ne "\r\e[K"'
     bind '"\e[A": history-search-backward'
     bind '"\e[B": history-search-forward'
     bind '"\eOA": history-search-backward'
