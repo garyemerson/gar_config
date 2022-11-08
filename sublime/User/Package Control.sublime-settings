@@ -17,7 +17,6 @@
 		"Indent XML",
 		"MarkdownLivePreview",
 		"Missing Palette Commands",
-		"Origami",
 		"Package Control",
 		"PowerShell",
 		"Protobuf Syntax Hightlighting",
@@ -25,10 +24,8 @@
 		"SFTP",
 		"SideBarEnhancements",
 		"Swift",
-		"Terminus",
 		"Theme - Solarized Flat",
 		"TOML",
-		"TypeScript",
-		"TypeScript Syntax"
-	]
+		"TypeScript Syntax",
+	],
 }
